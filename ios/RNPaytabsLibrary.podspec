@@ -17,8 +17,17 @@ Pod::Spec.new do |s|
 
 
   s.dependency "React"
-  #s.dependency "others"
-
+  s.dependency "BIObjCHelpers"
+  s.dependency "AFNetworking"
+  s.dependency "Mantle"
+  s.dependency "Reachability"
+  s.dependency "SDWebImage"
+  s.dependency "DGActivityIndicatorView"
+  s.dependency "Lockbox"
+  s.dependency "YLGIFImage"
+  s.dependency "SBJson"
+  s.dependency "PINCache"
+  s.dependency "IQKeyboardManager"
 end
 
   
