@@ -52,7 +52,7 @@ public class RNPaytabsLibraryModule extends ReactContextBaseJavaModule implement
         Intent in = new Intent(reactContext, PayTabActivity.class);
         in.putExtra(PaymentParams.MERCHANT_EMAIL, paymentDetails.getString("pt_merchant_email")); //this a demo account for testing the sdk
         in.putExtra(PaymentParams.SECRET_KEY,paymentDetails.getString("pt_secret_key"));//Add your Secret Key Here
-        in.putExtra(PaymentParams.LANGUAGE,PaymentParams.ENGLISH);
+        in.putExtra(PaymentParams.LANGUAGE,paymentDetails.getString("pt_language"));
         in.putExtra(PaymentParams.TRANSACTION_TITLE, paymentDetails.getString("pt_transaction_title"));
         in.putExtra(PaymentParams.AMOUNT, Double.parseDouble(paymentDetails.getString("pt_amount")));
 
@@ -81,7 +81,7 @@ public class RNPaytabsLibraryModule extends ReactContextBaseJavaModule implement
         in.putExtra(PaymentParams.THEME, paymentDetails.getBoolean("pt_theme_light")?PaymentParams.THEME_LIGHT:PaymentParams.THEME_DARK);
 
         //Tokenization
-        in.putExtra(PaymentParams.IS_TOKENIZATION, true);
+        in.putExtra(PaymentParams.IS_TOKENIZATION, paymentDetails.getBoolean("pt_tokenization"));
         reactContext.startActivityForResult(in, PaymentParams.PAYMENT_REQUEST_CODE, new Bundle());
     }
 
