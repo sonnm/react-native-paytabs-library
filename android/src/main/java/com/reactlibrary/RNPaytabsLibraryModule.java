@@ -3,24 +3,21 @@ package com.reactlibrary;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.facebook.react.bridge.ActivityEventListener;
 import com.facebook.react.bridge.Arguments;
+import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReadableMap;
-import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import com.facebook.react.bridge.WritableMap;
 import com.paytabs.paytabs_sdk.payment.ui.activities.PayTabActivity;
 import com.paytabs.paytabs_sdk.utils.PaymentParams;
 
 import static android.app.Activity.RESULT_OK;
-import static android.content.Context.MODE_PRIVATE;
 
 public class RNPaytabsLibraryModule extends ReactContextBaseJavaModule implements ActivityEventListener {
 
@@ -78,7 +75,6 @@ public class RNPaytabsLibraryModule extends ReactContextBaseJavaModule implement
 
         //Payment Page Style
         in.putExtra(PaymentParams.PAY_BUTTON_COLOR, paymentDetails.getString("pt_color"));
-        in.putExtra(PaymentParams.THEME, paymentDetails.getBoolean("pt_theme_light")?PaymentParams.THEME_LIGHT:PaymentParams.THEME_DARK);
 
         //Tokenization
         in.putExtra(PaymentParams.IS_TOKENIZATION, paymentDetails.getBoolean("pt_tokenization"));
