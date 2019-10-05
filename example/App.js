@@ -50,7 +50,6 @@ export default class App extends Component<Props> {
       [RNPaytabsLibrary.country_shipping]: "BHR",
       [RNPaytabsLibrary.postal_code_shipping]: "00973", //Put Country Phone code if Postal
       [RNPaytabsLibrary.color]: "#cccccc",
-      [RNPaytabsLibrary.theme_light]: false,
       [RNPaytabsLibrary.language]: 'en', // 'en', 'ar'
       [RNPaytabsLibrary.tokenization]: true
     }, (response) => {
