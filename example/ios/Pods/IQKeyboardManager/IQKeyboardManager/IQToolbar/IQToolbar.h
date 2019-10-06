@@ -21,10 +21,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "IQTitleBarButtonItem.h"
-
 #import <UIKit/UIToolbar.h>
-#import <UIKit/UIDevice.h>
+#import "IQTitleBarButtonItem.h"
 
 /**
  IQToolbar for IQKeyboardManager.
@@ -50,11 +48,6 @@
  Done bar button of toolbar.
  */
 @property(nonnull, nonatomic, strong) IQBarButtonItem *doneBarButton;
-
-/**
- Fixed space bar button of toolbar.
- */
-@property(nonnull, nonatomic, strong) IQBarButtonItem *fixedSpaceBarButton;
 
 @end
 
