@@ -10,7 +10,7 @@ import React, {Component} from 'react';
 import {NativeEventEmitter, Platform, StyleSheet, Text, Button, View} from 'react-native';
 import RNPaytabsLibrary from 'react-native-paytabs-library';
 
-// Prepare Paypage events
+// Prepare Paypage events for IOS
 const eventPreparePaypageEmitter = new NativeEventEmitter(RNPaytabsLibrary);
 const subscription = eventPreparePaypageEmitter.addListener(
   'EventPreparePaypage',
@@ -58,7 +58,8 @@ export default class App extends Component<Props> {
       [RNPaytabsLibrary.postal_code_shipping]: "00973", //Put Country Phone code if Postal
       [RNPaytabsLibrary.color]: "#cccccc",
       [RNPaytabsLibrary.language]: 'en', // 'en', 'ar'
-      [RNPaytabsLibrary.tokenization]: true
+      [RNPaytabsLibrary.tokenization]: true,
+      [RNPaytabsLibrary.preauth]: false
     }, (response) => {
       // Callback for success & fail.
     
