@@ -7,8 +7,15 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, Button, View} from 'react-native';
+import {NativeEventEmitter, Platform, StyleSheet, Text, Button, View} from 'react-native';
 import RNPaytabsLibrary from 'react-native-paytabs-library';
+
+// Prepare Paypage events
+const eventPreparePaypageEmitter = new NativeEventEmitter(RNPaytabsLibrary);
+const subscription = eventPreparePaypageEmitter.addListener(
+  'EventPreparePaypage',
+  (prepare) =>  RNPaytabsLibrary.log("eventPreparePaypageEmitter: " + prepare.action)
+);
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -23,7 +30,7 @@ export default class App extends Component<Props> {
   
   constructor(props){
     super(props);
-    this.state = { transactionID: 0 };
+    this.state = { message: '' };
   }
   
   onPressPay(){
@@ -65,7 +72,7 @@ export default class App extends Component<Props> {
       else
         RNPaytabsLibrary.log("Otherwise Response: " + response.pt_response_code);
     
-      this.state = { transactionID: response.pt_transaction_id };
+      this.state = { message: response.pt_transaction_id };
     
       // Tokenization
       //RNPaytabs.log(response.pt_token_customer_email);
@@ -81,7 +88,7 @@ export default class App extends Component<Props> {
         <Text style={styles.welcome}>Welcome to Paytabs Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        <Text style={styles.instructions}>{this.state.transactionID}</Text>
+        <Text style={styles.instructions}>{this.state.message}</Text>
         <Button
             onPress={this.onPressPay}
             title="Pay now"

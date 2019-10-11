@@ -12,6 +12,10 @@
 }
 RCT_EXPORT_MODULE()
 
+- (NSArray<NSString *> *)supportedEvents
+{
+  return @[@"EventPreparePaypage"];
+}
 
 RCT_EXPORT_METHOD(log:(NSString *)name )
 {
@@ -33,12 +37,12 @@ RCT_EXPORT_METHOD(start:(NSDictionary *)paymentDetails withCallBack:(RCTResponse
 
      view.didStartPreparePaymentPage = ^{
          // Start Prepare Payment Page
-         //TODO Show loading indicator
+         [self sendEventWithName:@"EventPreparePaypage" body:@{@"action": @"start"}];
      };
 
      view.didFinishPreparePaymentPage = ^{
          // Finish Prepare Payment Page
-         //TODO Stop loading indicator
+         [self sendEventWithName:@"EventPreparePaypage" body:@{@"action": @"finish"}];
      };
      
      view.didReceiveFinishTransactionCallback = ^(int responseCode, NSString * _Nonnull result, int transactionID, NSString * _Nonnull tokenizedCustomerEmail, NSString * _Nonnull tokenizedCustomerPassword, NSString * _Nonnull token, BOOL transactionState) {
