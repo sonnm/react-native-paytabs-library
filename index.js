@@ -28,5 +28,6 @@ RNPaytabsLibrary.color = 'pt_color';
 RNPaytabsLibrary.theme_light = 'pt_theme_light';
 RNPaytabsLibrary.language = 'pt_language';
 RNPaytabsLibrary.tokenization = 'pt_tokenization';
+RNPaytabsLibrary.preauth = 'pt_preauth';
 
 export default RNPaytabsLibrary;

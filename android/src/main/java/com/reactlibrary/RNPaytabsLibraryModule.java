@@ -78,6 +78,9 @@ public class RNPaytabsLibraryModule extends ReactContextBaseJavaModule implement
 
         //Tokenization
         in.putExtra(PaymentParams.IS_TOKENIZATION, paymentDetails.getBoolean("pt_tokenization"));
+        
+        //Pre auth
+        in.putExtra(PaymentParams.IS_PREAUTH, paymentDetails.getBoolean("pt_preauth"));
         reactContext.startActivityForResult(in, PaymentParams.PAYMENT_REQUEST_CODE, new Bundle());
     }
 
