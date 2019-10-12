@@ -1,7 +1,7 @@
-
 {
-  "name": "react-native-paytabs-library",
-  "version": "1.0.0",
+  "name": "@gardencoder/react-native-paytabs-library",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "version": "1.0.1",
   "description": "Paytabs react native library",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,5 @@
   "peerDependencies": {
     "react-native": "^0.41.2",
     "react-native-windows": "0.41.0-rc.1"
-
   }
 }
