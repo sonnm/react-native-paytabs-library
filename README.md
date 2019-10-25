@@ -1,13 +1,13 @@
 
 # react-native-paytabs-library
-![Version](https://img.shields.io/badge/Paytabs%20React%20Native%20library-v1.0.1-green)
+![Version](https://img.shields.io/badge/Paytabs%20React%20Native%20library-v1.0.2-green)
 ## Getting started
 
-`$ npm install @gardencoder/react-native-paytabs-library@1.0.1 --save`
+`$ npm install @gardencoder/react-native-paytabs-library@1.0.2 --save`
 
 ### Step 1: Link Library
 
-`$ react-native link @gardencoder/react-native-paytabs-library@1.0.1`
+`$ react-native link @gardencoder/react-native-paytabs-library@1.0.2`
 
 OR Manual installation
 
@@ -25,12 +25,12 @@ OR Manual installation
   - Add `new RNPaytabsLibraryPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```groovy
-  	include ':@gardencoder/react-native-paytabs-library@1.0.1'
-  	project(':@gardencoder/react-native-paytabs-library@1.0.1').projectDir = new File(rootProject.projectDir, 	'../node_modules/@gardencoder/react-native-paytabs-library@1.0.1/android')
+  	include ':@gardencoder/react-native-paytabs-library@1.0.2'
+  	project(':@gardencoder/react-native-paytabs-library@1.0.2').projectDir = new File(rootProject.projectDir, 	'../node_modules/@gardencoder/react-native-paytabs-library@1.0.2/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```groovy
-      compile project(':@gardencoder/react-native-paytabs-library@1.0.1')
+      compile project(':@gardencoder/react-native-paytabs-library@1.0.2')
   	```
 
 ### Step 2:
