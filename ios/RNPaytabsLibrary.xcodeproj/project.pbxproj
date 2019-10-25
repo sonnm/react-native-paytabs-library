@@ -203,11 +203,11 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-		  	ALWAYS_SEARCH_USER_PATHS = YES;
-			  FRAMEWORK_SEARCH_PATHS = (
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(SRCROOT)/../../../ios",
+					"$(SRCROOT)/../../../../ios",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -230,7 +230,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(SRCROOT)/../../../ios",
+					"$(SRCROOT)/../../../../ios",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
