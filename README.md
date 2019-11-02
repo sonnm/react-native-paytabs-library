@@ -1,6 +1,6 @@
 
 # react-native-paytabs-library
-![Version](https://img.shields.io/badge/Paytabs%20React%20Native%20library-v1.0.2-green)
+![Version](https://img.shields.io/badge/Paytabs%20React%20Native%20library-v1.0.3-green)
 ## Getting started
 
 `$ npm install @gardencoder/react-native-paytabs-library@1.0.2 --save`
