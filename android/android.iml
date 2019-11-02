@@ -147,6 +147,6 @@
     <orderEntry type="library" name="Gradle: android.arch.core:runtime:1.1.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: org.webkit:android-jsc:r174650@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.dbachelder:CreditCardEntry:1.4.9@aar" level="project" />
-    <orderEntry type="library" name="Gradle: artifacts:paytabs_sdk-v4.0.0:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: artifacts:paytabs_sdk-v4.0.1:unspecified@jar" level="project" />
   </component>
 </module>
