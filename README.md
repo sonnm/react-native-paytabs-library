@@ -45,8 +45,8 @@ OR Manual installation
 
 1. Append the following lines to `android/settings.gradle`:
   ```groovy
-    include ':paytabs_sdk-v4.0.0'
-    project(':paytabs_sdk-v4.0.0').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-paytabs-library/android/paytabs_sdk-v4.0.0/')
+    include ':paytabs_sdk-v4.0.1'
+    project(':paytabs_sdk-v4.0.1').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-paytabs-library/android/paytabs_sdk-v4.0.1/')
   ```
 
 ## Usage
