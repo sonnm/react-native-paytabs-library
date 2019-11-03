@@ -6,9 +6,7 @@
       steps:
         - checkout # check out the code in the project directory
         - run: echo "hello world" # run the `echo` command
-        - run:
-          name: Install Dependencies
-          command: npm install
-        - run:
-          name: Install dependencies of the example app
-          command: cd example && npm install
+        - Install Dependencies
+        - run: npm install
+        - Install dependencies of the example app
+        - run: cd example && npm install
