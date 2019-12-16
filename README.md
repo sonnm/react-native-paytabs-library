@@ -1,20 +1,20 @@
 
 # react-native-paytabs-library
-![Version](https://img.shields.io/badge/Paytabs%20React%20Native%20library-v1.0.3-green)
+![Version](https://img.shields.io/badge/Paytabs%20React%20Native%20library-v1.0.4-green)
 ## Getting started
 
-`$ npm install @gardencoder/react-native-paytabs-library@1.0.3 --save`
+`$ npm install @paytabscom/react-native-paytabs-library@1.0.4 --save`
 
 ### Step 1: Link Library
 
-`$ react-native link @gardencoder/react-native-paytabs-library@1.0.3`
+`$ react-native link @paytabscom/react-native-paytabs-library@1.0.4`
 
 OR Manual installation
 
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `@gardencoder/react-native-paytabs-library` and add `RNPaytabsLibrary.xcodeproj`
+2. Go to `node_modules` ➜ `@paytabscom/react-native-paytabs-library` and add `RNPaytabsLibrary.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNPaytabsLibrary.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
@@ -25,12 +25,12 @@ OR Manual installation
   - Add `new RNPaytabsLibraryPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```groovy
-  	include ':@gardencoder/react-native-paytabs-library@1.0.3'
-  	project(':@gardencoder/react-native-paytabs-library@1.0.3').projectDir = new File(rootProject.projectDir, 	'../node_modules/@gardencoder/react-native-paytabs-library@1.0.3/android')
+  	include ':@paytabscom/react-native-paytabs-library@1.0.4'
+  	project(':@paytabscom/react-native-paytabs-library@1.0.4').projectDir = new File(rootProject.projectDir, 	'../node_modules/@paytabscom/react-native-paytabs-library@1.0.4/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```groovy
-      compile project(':@gardencoder/react-native-paytabs-library@1.0.3')
+      compile project(':@paytabscom/react-native-paytabs-library@1.0.4')
   	```
 
 ### Step 2:
@@ -51,7 +51,7 @@ OR Manual installation
 
 ## Usage
 ```javascript
-import RNPaytabsLibrary from '@gardencoder/react-native-paytabs-library';
+import RNPaytabsLibrary from '@paytabscom/react-native-paytabs-library';
 
 RNPaytabsLibrary.start({
   [RNPaytabsLibrary.merchant_email]: "merchant_email",
