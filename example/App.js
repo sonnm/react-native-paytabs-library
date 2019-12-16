@@ -8,7 +8,7 @@
 
 import React, {Component} from 'react';
 import {NativeEventEmitter, Platform, StyleSheet, Text, Button, View} from 'react-native';
-import RNPaytabsLibrary from '@gardencoder/react-native-paytabs-library';
+import RNPaytabsLibrary from '@paytabscom/react-native-paytabs-library';
 
 // Prepare Paypage events for IOS
 const eventPreparePaypageEmitter = new NativeEventEmitter(RNPaytabsLibrary);

@@ -1,6 +1,6 @@
 rootProject.name = 'TestApp'
-include ':@gardencoder_react-native-paytabs-library'
-project(':@gardencoder_react-native-paytabs-library').projectDir = new File(rootProject.projectDir, '../node_modules/@gardencoder/react-native-paytabs-library/android')
+include ':@paytabscom_react-native-paytabs-library'
+project(':@paytabscom_react-native-paytabs-library').projectDir = new File(rootProject.projectDir, '../node_modules/@paytabscom/react-native-paytabs-library/android')
 include ':paytabs_sdk-v4.0.1'
-project(':paytabs_sdk-v4.0.1').projectDir = new File(rootProject.projectDir, '../node_modules/@gardencoder/react-native-paytabs-library/android/paytabs_sdk-v4.0.1/')
+project(':paytabs_sdk-v4.0.1').projectDir = new File(rootProject.projectDir, '../node_modules/@paytabscom/react-native-paytabs-library/android/paytabs_sdk-v4.0.1/')
 include ':app'

@@ -7,9 +7,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "@paytabscom/react-native-paytabs-library": "^1.0.4",
     "react": "16.8.3",
-    "react-native": "0.59.1",
-    "@gardencoder/react-native-paytabs-library": "1.0.3"
+    "react-native": "0.59.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
