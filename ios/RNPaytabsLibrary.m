@@ -45,7 +45,8 @@ RCT_EXPORT_METHOD(start:(NSDictionary *)paymentDetails withCallBack:(RCTResponse
          [self sendEventWithName:@"EventPreparePaypage" body:@{@"action": @"finish"}];
      };
      
-     view.didReceiveFinishTransactionCallback = ^(int responseCode, NSString * _Nonnull result, int transactionID, NSString * _Nonnull tokenizedCustomerEmail, NSString * _Nonnull tokenizedCustomerPassword, NSString * _Nonnull token, BOOL transactionState) {
+     view.didReceiveFinishTransactionCallback = ^(int responseCode, NSString *  result, int transactionID, NSString *  tokenizedCustomerEmail, NSString * tokenizedCustomerPassword, NSString * _Nonnull token, BOOL transactionState) {
+       if (tokenizedCustomerEmail != nil) {
          callback(@[@{
                         @"pt_response_code":[NSString stringWithFormat:@"%i", responseCode],
                         @"pt_transaction_id":[NSString stringWithFormat:@"%i", transactionID],
@@ -53,6 +54,15 @@ RCT_EXPORT_METHOD(start:(NSDictionary *)paymentDetails withCallBack:(RCTResponse
                         @"pt_token_customer_password":tokenizedCustomerPassword,
                         @"pt_token":token
                         }]);
+       }else{
+         callback(@[@{
+                        @"pt_response_code":[NSString stringWithFormat:@"%i", responseCode],
+                        @"pt_transaction_id":[NSString stringWithFormat:@"%i", transactionID],
+                        @"pt_token_customer_email":@"",
+                        @"pt_token_customer_password":@"",
+                        @"pt_token":@""
+                        }]);
+       }
      };
 
      [rootViewController presentViewController:view animated:true completion:nil];
