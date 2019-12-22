@@ -63,6 +63,9 @@ RCT_EXPORT_METHOD(start:(NSDictionary *)paymentDetails withCallBack:(RCTResponse
                         @"pt_token":@""
                         }]);
        }
+       [rootViewController dismissViewControllerAnimated:NO completion:nil];
+       [rootViewController.view removeFromSuperview];
+       [rootViewController removeFromParentViewController];
      };
 
      [rootViewController presentViewController:view animated:true completion:nil];
