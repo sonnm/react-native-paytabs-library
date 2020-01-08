@@ -97,7 +97,9 @@ public class RNPaytabsLibraryModule extends ReactContextBaseJavaModule implement
                 map.putString("pt_token_customer_email", data.getStringExtra(PaymentParams.CUSTOMER_PASSWORD));
             }
         }
-        mCallback.invoke(map);
+        
+        if (mCallback != null)
+          mCallback.invoke(map);
     }
     @Override
     public void onNewIntent(Intent intent) {
