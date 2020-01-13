@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@paytabscom/react-native-paytabs-library": "^1.0.5",
+    "@paytabscom/react-native-paytabs-library": "^1.0.6",
     "react": "16.8.3",
     "react-native": "0.59.1"
   },
