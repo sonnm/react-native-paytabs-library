@@ -93,8 +93,8 @@ public class RNPaytabsLibraryModule extends ReactContextBaseJavaModule implement
             map.putString("pt_transaction_id", data.getStringExtra(PaymentParams.TRANSACTION_ID));
             if (data.hasExtra(PaymentParams.TOKEN) && !data.getStringExtra(PaymentParams.TOKEN).isEmpty()) {
                 map.putString("pt_token", data.getStringExtra(PaymentParams.TOKEN));
-                map.putString("pt_token_customer_password", data.getStringExtra(PaymentParams.CUSTOMER_EMAIL));
-                map.putString("pt_token_customer_email", data.getStringExtra(PaymentParams.CUSTOMER_PASSWORD));
+                map.putString("pt_token_customer_password", data.getStringExtra(PaymentParams.CUSTOMER_PASSWORD));
+                map.putString("pt_token_customer_email", data.getStringExtra(PaymentParams.CUSTOMER_EMAIL));
             }
         }
         
